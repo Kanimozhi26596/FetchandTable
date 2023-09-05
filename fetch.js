@@ -22,7 +22,7 @@ function fetchTable(){
         tableRow.appendChild(noofmission);
         let details = document.createElement("th");
         details.classList = "Details";
-          tableRow.appendChild(details);
+        tableRow.appendChild(details);
         tableTag.appendChild(tableRow);
         details.innerText = "Details"
     fetch('JSON/Json.json')
@@ -43,16 +43,15 @@ function fetchTable(){
             active.appendChild(tableTag);
             
         })
-      
-        
-    }).catch(error => {
-        console.error('Error:' , error);
-    })
-  }
-else{
-    let outputData = document.createElement("h4");
-    outputData.classList = "outputData"
-    outputData.innerText = `No data's found`;
-    active.appendChild(outputData);
-}
-}
+         
+        }).catch(error => {
+            console.error('Error:' , error);
+        })
+    }
+    else{
+        let outputData = document.createElement("h4");
+        outputData.classList = "outputData"
+        outputData.innerText = `No data's found`;
+        active.appendChild(outputData);
+    }
+    }
